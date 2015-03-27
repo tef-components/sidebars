@@ -5,7 +5,12 @@
 @import "../../utils/less/mixins.less";
 
 .tef-sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   color: #333;
+  background-color: #c5ced3;
 
   header {
     font-size: 10px;
@@ -16,12 +21,23 @@
     background-color: #c5ced3;
   }
 
-  & > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  // list
+  .tef-list {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
     li {
+      position: relative;
       background-color: #d1d9dd;
       border-bottom: 1px solid #e5eaec;
       font-size: 12px;
@@ -46,4 +62,27 @@
       }
     }
   }
+
+  .tef-tabs ~ .tef-list { top: 50px; }
+  .tef-tabs ~ .tef-list { bottom: 40px; }
+
+  // input
+  .tef-input.block + [data-icon] {
+    top: 18px;
+    right: 15px;
+  }
+
+  // toolbar
+  .tef-toolbar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+// Allow height 100% inside a column
+[data-columns] > .tef-sidebar {
+  float: none;
 }
