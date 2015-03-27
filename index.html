@@ -26,6 +26,14 @@
         overflow-y: auto;
         border-radius: 4px;
       }
+      /* Demo only */
+      .tef-sidebar {
+        position: relative;
+        width: 300px;
+      }
+      .tef-sidebar .tef-list {
+        position: static;
+      }
     </style>
   </head>
 
@@ -47,25 +55,28 @@
       </header>
 
       <h2>Default</h2>
-      <div data-columns="3">
-        <nav class="tef-sidebar">
-          <ul class="tef-list">
+      <nav class="tef-sidebar">
+        <div class="tef-list">
+          <ul>
             <li><a href="">List item 1</a></li>
             <li>List item 2 (not clickable)</li>
             <li><a href="">List item 3</a></li>
             <li><a href="">List item 4</a></li>
             <li><a href="">List item 5</a></li>
             <li><a href="">List item 6</a></li>
-        </nav>
-      </div>
+          </ul>
+        </div>
+      </nav>
       <code>
         <style>
       <nav class="tef-sidebar">
-        <ul class="tef-list">
-          <li><a href="">List item 1</a></li>
-          <li>List item 2 (not clickable)</li>
-          ...
-        </ul>
+        <div class="tef-list">
+          <ul>
+            <li><a href="">List item 1</a></li>
+            <li>List item 2 (not clickable)</li>
+            ...
+          </ul>
+        </div>
       </nav>
         </style>
       </code>
@@ -73,41 +84,45 @@
       <h2>Grouped list</h2>
       <div data-columns="3">
         <nav class="tef-sidebar">
-          <header>Group 1</header>
-          <ul class="tef-list">
-            <li><a href="">List item 1</a></li>
-            <li><a href="">List item 2</a></li>
-            <li><a href="">List item 3</a></li>
-            <li><a href="">List item 4</a></li>
-            <li><a href="">List item 5</a></li>
-            <li><a href="">List item 6</a></li>
-          </ul>
-          <header>Group 2</header>
-          <ul class="tef-list">
-            <li><a href="">List item 1</a></li>
-            <li><a href="">List item 2</a></li>
-            <li><a href="">List item 3</a></li>
-            <li><a href="">List item 4</a></li>
-            <li><a href="">List item 5</a></li>
-            <li><a href="">List item 6</a></li>
-          </ul>
+          <div class="tef-list">
+            <header>Group 1</header>
+            <ul>
+              <li><a href="">List item 1</a></li>
+              <li><a href="">List item 2</a></li>
+              <li><a href="">List item 3</a></li>
+              <li><a href="">List item 4</a></li>
+              <li><a href="">List item 5</a></li>
+              <li><a href="">List item 6</a></li>
+            </ul>
+            <header>Group 2</header>
+            <ul>
+              <li><a href="">List item 1</a></li>
+              <li><a href="">List item 2</a></li>
+              <li><a href="">List item 3</a></li>
+              <li><a href="">List item 4</a></li>
+              <li><a href="">List item 5</a></li>
+              <li><a href="">List item 6</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
       <code>
         <style>
       <nav class="tef-sidebar">
-        <header>Group 1</header>
-        <ul class="tef-list">
-          <li><a href="">List item 1</a></li>
-          <li><a href="">List item 2</a></li>
-          ...
-        </ul>
-        <header>Group 2</header>
-        <ul class="tef-list">
-          <li><a href="">List item 1</a></li>
-          <li><a href="">List item 2</a></li>
-          ...
-        </ul>
+        <div class="tef-list">
+          <header>Group 1</header>
+          <ul>
+            <li><a href="">List item 1</a></li>
+            <li><a href="">List item 2</a></li>
+            ...
+          </ul>
+          <header>Group 2</header>
+          <ul>
+            <li><a href="">List item 1</a></li>
+            <li><a href="">List item 2</a></li>
+            ...
+          </ul>
+        </div>
       </nav>
         </style>
       </code>
@@ -115,25 +130,29 @@
       <h2>Inputs</h2>
       <div data-columns="3">
         <nav class="tef-sidebar">
-          <ul class="tef-list">
+          <div class="tef-list">
+            <ul>
+              <li>
+                <input type="text" class="tef-input icon small block">
+                <i data-icon="search"></i>
+              </li>
+              <li>item 1</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <code>
+        <style>
+      <nav class="tef-sidebar">
+        <div class="tef-list">
+          <ul>
             <li>
               <input type="text" class="tef-input icon small block">
               <i data-icon="search"></i>
             </li>
             <li>item 1</li>
           </ul>
-        </nav>
-      </div>
-      <code>
-        <style>
-      <nav class="tef-sidebar">
-        <ul class="tef-list">
-          <li>
-            <input type="text" class="tef-input icon small block">
-            <i data-icon="search"></i>
-          </li>
-          <li>item 1</li>
-        </ul>
+        </div>
       </nav>
         </style>
       </code>
@@ -141,11 +160,13 @@
       <h2>Toolbars</h2>
       <div data-columns="3">
         <nav class="tef-sidebar">
-          <ul class="tef-list">
-            <li>Item 8</li>
-            <li>Item 9</li>
-          </ul>
-          <br><br><br><br>
+          <div class="tef-list">
+            <ul>
+              <li>Item 8</li>
+              <li>Item 9</li>
+            </ul>
+            <br><br><br><br>
+          </div>
           <ul class="tef-toolbar">
             <li><i data-icon="user"></i></li>
             <li>Edit</li>
@@ -157,10 +178,12 @@
       <code>
         <style>
       <nav class="tef-sidebar">
-        <ul class="tef-list">
-          <li>Item 8</li>
-          <li>Item 9</li>
-        </ul>
+        <div class="tef-list">
+          <ul>
+            <li>Item 8</li>
+            <li>Item 9</li>
+          </ul>
+        </div>
         <ul class="tef-toolbar">
           <li><i data-icon="user"></i></li>
           <li>Edit</li>
