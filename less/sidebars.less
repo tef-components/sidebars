@@ -5,12 +5,27 @@
 @import "../../utils/less/mixins.less";
 
 .tef-sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
   color: #333;
   background-color: #c5ced3;
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+
+    // list
+    .tef-list {
+      overflow: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
 
   header {
     font-size: 10px;
@@ -21,53 +36,11 @@
     background-color: #c5ced3;
   }
 
-  // list
-  .tef-list {
-    overflow: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      position: relative;
-      background-color: #d1d9dd;
-      border-bottom: 1px solid #e5eaec;
-      font-size: 12px;
-      line-height: 14px;
-      padding: 12px 15px;
-      box-sizing: border-box;
-    }
-
-    a {
-      display: block;
-      color: #333;
-      text-decoration: none;
-      margin: -12px -15px;
-      padding: 12px 15px;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        color: #fff;
-        background-color: #9ea5a9;
-      }
-    }
-  }
-
   .tef-tabs ~ .tef-list { top: 50px; }
   .tef-tabs ~ .tef-list { bottom: 40px; }
 
   // input
-  .tef-input.block + [data-icon] {
+  .tef-input.block + [icon] {
     top: 18px;
     right: 15px;
   }
@@ -79,10 +52,25 @@
     bottom: 0;
     left: 0;
     z-index: 1;
-  }
-}
+    background-color: #beccd4;
+    border-top: 1px solid #e5eaec;
+    color: #364145;
+    padding: 0;
 
-// Allow height 100% inside a column
-[data-columns] > .tef-sidebar {
-  float: none;
+    li {
+      padding: 0 5px;
+      border-color: #e5eaec;
+      &:first-child { border-left: none; }
+    }
+
+    a {
+      color: #364145;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #d1d9dd;
+      }
+    }
+  }
 }

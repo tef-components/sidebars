@@ -28,7 +28,6 @@
       }
       /* Demo only */
       .tef-sidebar {
-        position: relative;
         width: 300px;
       }
       .tef-sidebar .tef-list {
@@ -43,7 +42,7 @@
         <h1>Sidebars</h1>
         <div>
           <label>Change theme</label>
-          <div class="tef-dropdown" data-icon="angle_down">
+          <div class="tef-dropdown" icon="angle_down">
             <select id="themeSelector">
               <option value="telefonica">Telefónica</option>
               <option value="movistar">Movistar</option>
@@ -134,7 +133,7 @@
             <ul>
               <li>
                 <input type="text" class="tef-input icon small block">
-                <i data-icon="search"></i>
+                <i icon="search"></i>
               </li>
               <li>item 1</li>
             </ul>
@@ -148,7 +147,7 @@
           <ul>
             <li>
               <input type="text" class="tef-input icon small block">
-              <i data-icon="search"></i>
+              <i icon="search"></i>
             </li>
             <li>item 1</li>
           </ul>
@@ -167,12 +166,14 @@
             </ul>
             <br><br><br><br>
           </div>
-          <ul class="tef-toolbar">
-            <li><i data-icon="user"></i></li>
-            <li>Edit</li>
-            <li class="active"><i data-icon="search"></i></li>
-            <li><i data-icon="help_circle"></i></li>
-          </ul>
+          <nav class="tef-toolbar">
+            <ul>
+              <li><a href=""><i icon="user"></i></a></li>
+              <li><a href="">Edit</a></li>
+              <li class="active"><a href=""><i icon="search"></i></a></li>
+              <li><a href=""><i icon="help_circle"></i></a></li>
+            </ul>
+          </nav>
         </nav>
       </div>
       <code>
@@ -184,12 +185,14 @@
             <li>Item 9</li>
           </ul>
         </div>
-        <ul class="tef-toolbar">
-          <li><i data-icon="user"></i></li>
-          <li>Edit</li>
-          <li class="active"><i data-icon="search"></i></li>
-          <li><i data-icon="help_circle"></i></li>
-        </ul>
+        <nav class="tef-toolbar">
+          <ul>
+            <li><a href=""><i icon="user"></i></a></li>
+            <li><a href="">Edit</a></li>
+            <li class="active"><a href=""><i icon="search"></i></a></li>
+            <li><a href=""><i icon="help_circle"></i></a></li>
+          </ul>
+        </nav>
       </nav>
         </style>
       </code>
