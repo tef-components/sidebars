@@ -16,11 +16,5 @@
     "package.json",
     "node_modules",
     "bower_components"
-  ],
-  "dependencies": {
-    "utils": "tef-components/utils",
-    "icons": "tef-components/icons",
-    "inputs": "tef-components/inputs",
-    "toolbars": "tef-components/toolbars"
-  }
+  ]
 }
